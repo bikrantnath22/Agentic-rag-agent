@@ -1,12 +1,12 @@
 # Autonomous Enterprise RAG Service
 
-A production-grade Retrieval-Augmented Generation (RAG) system with stateful LangGraph agentic workflows, dynamic 4-tool routing, deterministic Redis caching, Prometheus observability, and automated quality self-reflection.
+A Retrieval-Augmented Generation (RAG) system with stateful LangGraph agentic workflows, dynamic 4-tool routing, deterministic Redis caching, Prometheus observability, and automated quality self-reflection.
 
 ---
 
 ## Highlights & Verified Metrics
 
-* **Production-Grade Microservice**: Architected an enterprise RAG service (FastAPI, Gemini Flash-Lite, ChromaDB) over a 500-page technical documentation corpus (2,461 chunks); integrated SHA-256 Redis caching to serve repeat queries in <50 ms vs. 4.16 s P50 uncached, instrumented with Prometheus metrics.
+* **High-Throughput RAG Service**: Built a FastAPI retrieval service (Gemini Flash-Lite, ChromaDB) indexing a 500-page technical handbook (2,461 chunks); reduced repeat query latency from 4.16 s P50 to <50 ms using SHA-256 Redis caching with Prometheus metrics.
 * **Agentic Multi-Tool Orchestration**: Engineered a stateful LangGraph agent with 4-tool routing (retriever, Python, math, web search) and an LLM-judged self-reflection retry loop; refused all 15 out-of-domain test queries.
 * **Rigorous Evaluation**: Evaluated on 85 answerable queries across 10 domains: 0.82 MRR, 78% section-level Precision@3, and 153/153 claims judged supported by an LLM across 56 answered queries; 16 automated tests passing.
 
