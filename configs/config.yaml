@@ -2,7 +2,7 @@
 # Most settings can be overridden by environment variables
 
 system:
-  name: "Multi-Modal RAG Agent"
+  name: "Enterprise RAG Agent"
   version: "0.1.0"
   environment: "development"
 

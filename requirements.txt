@@ -7,10 +7,8 @@ chromadb>=1.0.0
 qdrant-client>=1.19.0
 rank-bm25>=0.2.2
 
-# Document Ingestion & Multi-Modal
+# Document Ingestion (PDF, Text, HTML, Markdown)
 pypdf>=4.0.0
-pytesseract>=0.3.10
-Pillow>=10.3.0
 beautifulsoup4>=4.12.3
 aiofiles>=23.2.1
 

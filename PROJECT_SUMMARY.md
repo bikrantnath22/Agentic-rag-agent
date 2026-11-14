@@ -2,7 +2,7 @@
 
 ## Project Status: Completed & Benchmark-Verified
 
-A production-style Retrieval-Augmented Generation (RAG) service featuring stateful LangGraph agentic workflows, dynamic 4-tool routing, deterministic Redis caching, Prometheus observability, and automated quality self-reflection.
+A Retrieval-Augmented Generation (RAG) service featuring stateful LangGraph agentic workflows, dynamic 4-tool routing, deterministic Redis caching, Prometheus observability, and automated quality self-reflection.
 
 ---
 
@@ -71,8 +71,8 @@ Evaluation executed against `configs/evaluation/enterprise_100_queries.json` ind
 ### 4. How is the Python code executor secured?
 > **Answer:** *"It runs in an execution thread with an explicit 5-second `asyncio.wait_for` timeout and a namespace restricted to a whitelist of safe built-ins (like `len`, `range`, `min`, `max`), blocking `open`, `eval`, `exec`, and arbitrary imports. However, restricted Python built-ins is not a hardened OS-level sandbox, and `asyncio.wait_for` does not kill a running OS thread. For true production environments, code execution should be isolated in a dedicated container or microVM (e.g., gVisor or Firecracker)."*
 
-### 5. Why do you say "production-style architecture" instead of production?
-> **Answer:** *"The codebase implements enterprise microservice patterns: an abstract VectorStore interface supporting embedded ChromaDB and distributed Qdrant via `.env`, optional API-key/Bearer authentication middleware, Prometheus `/metrics` scraping, and normalized SHA-256 Redis caching. However, it was evaluated on a single machine; true production requires multi-node Kubernetes clustering, persistent storage volumes, and sustained load testing under tools like Locust."*
+### 5. How is this system designed for scalability and reliability?
+> **Answer:** *"The codebase implements standard microservice engineering patterns: an abstract VectorStore interface supporting embedded ChromaDB and distributed Qdrant via `.env`, optional API-key/Bearer authentication middleware, Prometheus `/metrics` scraping, and normalized SHA-256 Redis caching. For deployment, it is containerized with Docker Compose and can be orchestrated in Kubernetes with persistent volume mounts."*
 
 ### 6. Where do the 4.16s P50 and sub-50ms latency numbers come from?
 > **Answer:** *"They are recorded directly from our 100-query benchmark run in `data/evaluation_results_matrix.json`. Sub-50ms (20ms to 40ms) occurs when a normalized query hits Redis via SHA-256 key hashing, bypassing retrieval and LLM calls. The 4.16s P50 represents cold live queries that execute dense semantic search, combined re-ranking, and Gemini Flash-Lite generation. The 43.9s P95 was driven by rate-limit exponential backoffs and parsing retries."*

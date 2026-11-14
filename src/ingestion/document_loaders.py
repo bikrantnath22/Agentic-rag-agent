@@ -7,12 +7,6 @@ from typing import Any
 import aiofiles
 from bs4 import BeautifulSoup
 
-try:
-    from unstructured.partition.pdf import partition_pdf  # type: ignore
-    HAS_UNSTRUCTURED = True
-except ImportError:
-    HAS_UNSTRUCTURED = False
-
 from ..observability.logging import get_logger
 from ..utils.exceptions import IngestionError
 
@@ -61,11 +55,11 @@ class DocumentLoader:
 
 
 class PDFLoader(DocumentLoader):
-    """PDF document loader using unstructured."""
+    """PDF document loader using pypdf for clean text extraction."""
 
     async def load(self, file_path: str) -> list[Document]:
         """
-        Load PDF file.
+        Load text from PDF file page by page.
 
         Args:
             file_path: Path to PDF file
@@ -78,86 +72,32 @@ class PDFLoader(DocumentLoader):
         """
         try:
             logger.info(f"Loading PDF: {file_path}")
+            import pypdf
 
-            if not HAS_UNSTRUCTURED:
-                import pypdf
-
-                reader = pypdf.PdfReader(file_path)
-                documents = []
-                for i, page in enumerate(reader.pages):
-                    text = page.extract_text() or ""
-                    if text.strip():
-                        documents.append(
-                            Document(
-                                content=text,
-                                metadata={
-                                    "source": file_path,
-                                    "page": i + 1,
-                                    "type": "pdf",
-                                },
-                            )
-                        )
-                return documents
-
-            # Run in thread pool to avoid blocking
-            loop = asyncio.get_event_loop()
-            elements = await loop.run_in_executor(
-                None,
-                lambda: partition_pdf(
-                    filename=file_path,
-                    strategy="auto",
-                    extract_images_in_pdf=False,
-                ),
-            )
-
-            # Group elements by page
+            reader = pypdf.PdfReader(file_path)
             documents = []
-            current_page = 1
-            page_content = []
-
-            for element in elements:
-                element_page = getattr(element.metadata, "page_number", 1)
-
-                if element_page != current_page:
-                    # Save previous page
-                    if page_content:
-                        documents.append(
-                            Document(
-                                content="\n".join(page_content),
-                                metadata={
-                                    "source": file_path,
-                                    "page": current_page,
-                                    "type": "pdf",
-                                },
-                            )
+            for i, page in enumerate(reader.pages):
+                text = page.extract_text() or ""
+                if text.strip():
+                    documents.append(
+                        Document(
+                            content=text,
+                            metadata={
+                                "source": file_path,
+                                "page": i + 1,
+                                "type": "pdf",
+                            },
                         )
-                    page_content = []
-                    current_page = element_page
-
-                page_content.append(str(element))
-
-            # Save last page
-            if page_content:
-                documents.append(
-                    Document(
-                        content="\n".join(page_content),
-                        metadata={
-                            "source": file_path,
-                            "page": current_page,
-                            "type": "pdf",
-                        },
                     )
-                )
-
-            logger.info(f"Loaded {len(documents)} pages from PDF")
+            logger.info(f"Loaded {len(documents)} pages from PDF: {file_path}")
             return documents
 
         except Exception as e:
-            logger.error(f"Failed to load PDF: {e}")
+            logger.error(f"Failed to load PDF {file_path}: {e}")
             raise IngestionError(
                 f"Failed to load PDF {file_path}",
                 original_error=e,
-            )
+            ) from e
 
 
 class TextLoader(DocumentLoader):
