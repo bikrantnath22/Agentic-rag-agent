@@ -3,16 +3,16 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "multimodal-rag-agent"
+name = "enterprise-rag-agent"
 version = "0.1.0"
-description = "Production-grade multi-modal RAG system with agentic workflows"
+description = "Enterprise RAG service featuring LangGraph agentic workflows, hybrid retrieval, and deterministic caching"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
     {name = "Bikrant Nath", email = "bikrantnath@gmail.com"}
 ]
-keywords = ["rag", "ai", "llm", "agents", "multimodal", "langchain"]
+keywords = ["rag", "ai", "llm", "agents", "langgraph", "hybrid-search"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
