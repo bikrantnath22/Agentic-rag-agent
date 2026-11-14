@@ -1,0 +1,1559 @@
+{
+  "timestamp": "2026-11-13T20:01:25Z",
+  "total_queries_evaluated": 60,
+  "mean_faithfulness_overall": 1.0,
+  "mean_faithfulness_single_hop": 1.0,
+  "mean_faithfulness_multi_hop": 1.0,
+  "results": [
+    {
+      "id": "Q001",
+      "category": "single_hop",
+      "query": "What scheduler scoring algorithms and leader election lease mechanisms govern the Kubernetes control plane?",
+      "answer_preview": "Based on the provided documents, the text states that all subsystem modules handling leader election with leases and sch...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "All subsystem modules handling leader election with leases and scheduler scoring algorithms must enforce strict idempotency, telemetry emission, and failure boundary isolation under operational standards K8S-CTRL-0107 and K8S-CTRL-0109.",
+          "supported": true,
+          "reason": "Directly supported by clauses 1.1.7 and 1.1.9 mentioning K8S-CTRL-0107 and K8S-CTRL-0109."
+        },
+        {
+          "claim": "Integration with upstream event buses requires explicit lease expiration timers configured to a default maximum threshold of 30,000 milliseconds.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'explicit lease expiration timers configured to a default maximum threshold of 30,000 milliseconds'."
+        },
+        {
+          "claim": "The documents do not specify the exact underlying algorithmic implementation details or specific lease mechanisms beyond the listed requirements and threshold.",
+          "supported": true,
+          "reason": "The context mentions leader election with leases and scheduler scoring algorithms but does not provide specific algorithmic implementation details."
+        }
+      ]
+    },
+    {
+      "id": "Q002",
+      "category": "single_hop",
+      "query": "What eBPF datapaths and Cilium Hubble observability tools are used for container networking?",
+      "answer_preview": "Based on the provided documents, subsystem modules handling eBPF datapaths and Cilium Hubble observability (alongside mT...",
+      "num_context_chunks": 5,
+      "total_claims": 5,
+      "supported_claims": 5,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling eBPF datapaths and Cilium Hubble observability (alongside mTLS sidecar proxies, Envoy connection pooling, and IPAM subnet allocation) are governed by operational standards such as K8S-NET-0107, K8S-NET-0109, and K8S-NET-0105 within the container network interface and service mesh framework.",
+          "supported": true,
+          "reason": "Directly supported by Clauses 1.2.5, 1.2.7, and 1.2.9 in the retrieved contexts detailing standards K8S-NET-0105, K8S-NET-0107, and K8S-NET-0109."
+        },
+        {
+          "claim": "All such subsystem modules must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'all subsystem modules handling eBPF datapaths... must enforce strict idempotency, telemetry emission, and failure boundary isolation.'"
+        },
+        {
+          "claim": "When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.'"
+        },
+        {
+          "claim": "Integration with upstream event buses requires monotonic sequence numbering and explicit lease expiration timers configured to a default maximum threshold of 30,000 milliseconds.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'integration with upstream event buses requires monotonic sequence numbering and explicit lease expiration timers configured to a default maximum threshold of 30,000 milliseconds.'"
+        },
+        {
+          "claim": "Telemetry streams must capture request headers, payload checksums, and distributed trace contexts conforming to OpenTelemetry semantic conventions before emitting records to persistent cold storage.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'Telemetry streams must capture request headers, payload checksums, and distributed trace contexts conforming to OpenTelemetry semantic conventions before emitting records to persistent cold storage.'"
+        }
+      ]
+    },
+    {
+      "id": "Q003",
+      "category": "single_hop",
+      "query": "Which CSI driver protocols support read-write-many NFS access modes and dynamic volume snapshots?",
+      "answer_preview": "Based on the provided documents, the text outlines the operational framework for persistent storage subsystems and CSI d...",
+      "num_context_chunks": 5,
+      "total_claims": 4,
+      "supported_claims": 4,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The text outlines the operational framework for persistent storage subsystems and CSI drivers under standards K8S-STOR-0105 and K8S-STOR-0107.",
+          "supported": true,
+          "reason": "Directly supported by the text mentioning Clause 1.3.5 (standard K8S-STOR-0105) and Clause 1.3.7 (standard K8S-STOR-0107)."
+        },
+        {
+          "claim": "These standards apply to subsystem modules that handle dynamic provisioning, block versus filesystem mounts, volume snapshot controllers, read-write-many NFS protocols, and ephemeral inline volumes.",
+          "supported": true,
+          "reason": "Directly quoted from the text listing these exact subsystem module responsibilities."
+        },
+        {
+          "claim": "The provided documents do not specify or list particular CSI driver protocols that support these features.",
+          "supported": true,
+          "reason": "Accurate assessment of the context; the text mentions 'read-write-many NFS protocols' and 'volume snapshot controllers' as features handled by subsystem modules, but does not identify specific CSI driver protocols supporting them."
+        },
+        {
+          "claim": "They only state that subsystem modules handling these protocols and features must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text requiring these modules to enforce strict idempotency, telemetry emission, and failure boundary isolation."
+        }
+      ]
+    },
+    {
+      "id": "Q004",
+      "category": "single_hop",
+      "query": "How do KEDA event-driven triggers and Horizontal Pod Autoscaler HPA metrics profile workloads?",
+      "answer_preview": "Based on the provided context, the documents do not explain the specific methodology of *how* KEDA event-driven triggers...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The provided context does not explain the specific methodology of how KEDA event-driven triggers and HPA metrics profile workloads.",
+          "supported": true,
+          "reason": "The context only mentions that modules handling these features must enforce certain operational standards, but does not detail the profiling methodology."
+        },
+        {
+          "claim": "Clause 1.4.8 (operational standard K8S-AUTO-0108) specifies the governing operational framework for autoscaling strategies and workload profiling.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'Clause 1.4.8 specifies the governing operational framework for autoscaling strategies and workload profiling... Under operational standard K8S-AUTO-0108...'"
+        },
+        {
+          "claim": "The standard requires all subsystem modules handling HPA metrics, KEDA event-driven triggers, VPA recommendations, and cluster autoscaler node provisioning to enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'all subsystem modules handling horizontal pod autoscaler HPA metrics, KEDA event-driven triggers, vertical pod autoscaler VPA recommendations, cluster autoscaler node provisioning must enforce strict idempotency, telemetry emission, and failure boundary isolation.'"
+        }
+      ]
+    },
+    {
+      "id": "Q005",
+      "category": "single_hop",
+      "query": "What NetworkPolicies and Pod Security Standards PSS enforce multi-tenancy namespace isolation?",
+      "answer_preview": "Based on the provided documents, subsystem modules handling NetworkPolicies, Pod Security Standards (PSS), Admission Web...",
+      "num_context_chunks": 5,
+      "total_claims": 4,
+      "supported_claims": 4,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling NetworkPolicies, Pod Security Standards (PSS), Admission Webhooks, ResourceQuotas, LimitRanges, and hierarchical namespaces (HNC) must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly stated in all context documents (e.g., Clause 1.5.7, 1.5.9, 1.5.1)."
+        },
+        {
+          "claim": "These requirements are mandated under Clause 1.5.7 (operational standard K8S-ISO-0107).",
+          "supported": true,
+          "reason": "Directly supported by contexts 1, 2, and 3."
+        },
+        {
+          "claim": "These requirements are mandated under Clause 1.5.9 (operational standard K8S-ISO-0109).",
+          "supported": true,
+          "reason": "Directly supported by context 4."
+        },
+        {
+          "claim": "These requirements are mandated under Clause 1.5.1 (operational standard K8S-ISO-0101).",
+          "supported": true,
+          "reason": "Directly supported by context 5."
+        }
+      ]
+    },
+    {
+      "id": "Q006",
+      "category": "single_hop",
+      "query": "What asymmetric algorithm and PKCE flow are required for enterprise JWT token cryptography?",
+      "answer_preview": "Based on the provided documents, the enterprise architecture requires:\n\n* **Asymmetric algorithm:** JWT asymmetric signa...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "JWT asymmetric signatures using RS256 are required for enterprise JWT token cryptography.",
+          "supported": true,
+          "reason": "The context explicitly states that subsystem modules handling JWT asymmetric signatures using RS256 are specified under the operational standards."
+        },
+        {
+          "claim": "Subsystem modules must handle the OAuth 2.0 authorization code flow with PKCE.",
+          "supported": true,
+          "reason": "The context explicitly mentions subsystem modules handling OAuth 2.0 authorization code flow with PKCE."
+        }
+      ]
+    },
+    {
+      "id": "Q007",
+      "category": "single_hop",
+      "query": "How are least-privilege permission grants and time-bound break-glass access enforced in RBAC?",
+      "answer_preview": "Based on the provided documents, subsystem modules handling least-privilege permission grants and time-bound break-glass...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling least-privilege permission grants and time-bound break-glass access must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'all subsystem modules handling least-privilege permission grants... time-bound break-glass access... must enforce strict idempotency, telemetry emission, and failure boundary isolation.'"
+        },
+        {
+          "claim": "This also applies to conditional IAM policies, dynamic role assumption, and cross-account delegation.",
+          "supported": true,
+          "reason": "Directly supported by the text listing these items alongside least-privilege permission grants and time-bound break-glass access."
+        }
+      ]
+    },
+    {
+      "id": "Q008",
+      "category": "single_hop",
+      "query": "What symmetric AES-GCM data key rotation and envelope cryptography are mandated by KMS?",
+      "answer_preview": "Based on the provided documents, the operational framework mandates **symmetric 256-bit AES-GCM data key rotation** and ...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The operational framework mandates symmetric 256-bit AES-GCM data key rotation and envelope cryptography (envelope decryption).",
+          "supported": true,
+          "reason": "Directly stated in the context for both SEC-KMS-0207 and SEC-KMS-0210."
+        },
+        {
+          "claim": "Clause 2.3.7 / Operational Standard SEC-KMS-0207 mandates that subsystem modules handling HSM tiering, CMEK, symmetric 256-bit AES-GCM data key rotation, and envelope decryption must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the majority of context documents mentioning Clause 2.3.7 and SEC-KMS-0207."
+        },
+        {
+          "claim": "Clause 2.3.10 / Operational Standard SEC-KMS-0210 specifies the same requirements for subsystem modules handling HSM tiering, CMEK, symmetric 256-bit AES-GCM data key rotation, and envelope decryption to enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the final context document mentioning Clause 2.3.10 and SEC-KMS-0210."
+        }
+      ]
+    },
+    {
+      "id": "Q009",
+      "category": "single_hop",
+      "query": "What mutual TLS cipher negotiation and context-aware access proxies define Zero-Trust Network Access?",
+      "answer_preview": "Based on the provided documents, Clause 2.4.7 (and Clause 2.4.1 for standard SEC-ZTNA-0201) specifies the governing oper...",
+      "num_context_chunks": 5,
+      "total_claims": 5,
+      "supported_claims": 5,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Clause 2.4.7 and Clause 2.4.1 specify the governing operational framework for zero-trust network access and perimeter defense.",
+          "supported": true,
+          "reason": "Directly supported by the text in clauses 2.4.7 and 2.4.1 regarding zero-trust network access and perimeter defense."
+        },
+        {
+          "claim": "Under operational standards SEC-ZTNA-0207 and SEC-ZTNA-0201, subsystem modules handling context-aware access proxies, device posture validation, software-defined perimeters (SDP), mutual TLS (mTLS) cipher negotiation, and microsegmentation must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text outlining requirements for subsystem modules under these policies."
+        },
+        {
+          "claim": "The runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers when executing under multi-region distributed conditions.",
+          "supported": true,
+          "reason": "Directly supported by the text describing multi-region distributed conditions."
+        },
+        {
+          "claim": "Integration with upstream event buses requires monotonic sequence numbering and explicit lease expiration timers configured to a default maximum threshold of 30,000 milliseconds.",
+          "supported": true,
+          "reason": "Directly quoted/paraphrased accurately from the text."
+        },
+        {
+          "claim": "Telemetry streams must capture request headers, payload checksums, and distributed trace contexts conforming to OpenTelemetry semantic conventions before emitting records to persistent cold storage.",
+          "supported": true,
+          "reason": "Directly supported by the text regarding telemetry stream capture."
+        }
+      ]
+    },
+    {
+      "id": "Q010",
+      "category": "single_hop",
+      "query": "What SLSA Level 3 provenance and cryptographic artifact signing with Cosign are required for images?",
+      "answer_preview": "Based on the provided documents, operational standards SEC-SUPP-0206 (referenced in Clauses 2.5.6) and SEC-SUPP-0203 (re...",
+      "num_context_chunks": 5,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Operational standards SEC-SUPP-0206 and SEC-SUPP-0203 require subsystem modules handling base image provenance SLSA Level 3 and cryptographic artifact signing with Cosign to enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text which states that under SEC-SUPP-0206 and SEC-SUPP-0203, all subsystem modules handling software bill of materials SBOM generation, cryptographic artifact signing with Cosign, base image provenance SLSA Level 3, CVE severity scoring must enforce strict idempotency, telemetry emission, and failure boundary isolation."
+        }
+      ]
+    },
+    {
+      "id": "Q011",
+      "category": "single_hop",
+      "query": "What Raft consensus state transitions and heartbeat timeouts mitigate split-brain conditions?",
+      "answer_preview": "Based on the provided documents, subsystem modules handling Raft protocol state transitions, log replication, heartbeat ...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling Raft protocol state transitions, log replication, heartbeat timeouts, and split-brain mitigation must enforce strict idempotency, telemetry emission, and failure boundary isolation under operational standards DB-CONS-0301 (Clause 3.1.1) and DB-CONS-0305 (Clause 3.1.5).",
+          "supported": true,
+          "reason": "Directly supported by the text in clauses 3.1.1 and 3.1.5 regarding operational standards DB-CONS-0301 and DB-CONS-0305."
+        },
+        {
+          "claim": "When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.",
+          "supported": true,
+          "reason": "Directly supported by the text stating 'When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.'"
+        }
+      ]
+    },
+    {
+      "id": "Q012",
+      "category": "single_hop",
+      "query": "What is the difference between leveled and size-tiered compaction in LSM-tree memtables and SSTables?",
+      "answer_preview": "The provided context mentions \"compaction algorithms (leveled vs size-tiered)\" in relation to LSM-tree memtables and SST...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The provided context mentions 'compaction algorithms (leveled vs size-tiered)' in relation to LSM-tree memtables and SSTables.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'compaction algorithms (leveled vs size-tiered), B+ tree page splitting, write-ahead logging WAL durability must enforce strict idempotency...'"
+        },
+        {
+          "claim": "The context does not explain the difference between leveled and size-tiered compaction.",
+          "supported": true,
+          "reason": "The context only names them within a list of operational requirements without defining or contrasting their operational mechanisms."
+        }
+      ]
+    },
+    {
+      "id": "Q013",
+      "category": "single_hop",
+      "query": "How do two-phase commit 2PC and multi-version concurrency control MVCC prevent serializable ACID anomalies?",
+      "answer_preview": "Based on the provided documents, the text states that subsystem modules handling \"two-phase commit 2PC, multi-version co...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The text states that subsystem modules handling two-phase commit 2PC, multi-version concurrency control MVCC, snapshot isolation, serializable ACID anomalies, distributed deadlock detection must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text in clauses 3.3.1, 3.3.2, and 3.3.10."
+        },
+        {
+          "claim": "The provided context does not explain the specific causal mechanism of how 2PC and MVCC prevent serializable ACID anomalies.",
+          "supported": true,
+          "reason": "Accurate assessment of the context limitations; the text lists the terms together as a requirement set but does not provide a mechanistic explanation."
+        }
+      ]
+    },
+    {
+      "id": "Q014",
+      "category": "single_hop",
+      "query": "What virtual node distribution and replication factor RF=3 write quorums ensure data partitioning?",
+      "answer_preview": "Based on the provided context, there is no information regarding virtual node distribution, replication factor (RF=3), o...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Based on the provided context, there is no information regarding virtual node distribution, replication factor (RF=3), or write quorums for data partitioning.",
+          "supported": true,
+          "reason": "The context discusses database caching, chaos engineering parameters, and storage engine structures, and indeed contains no information about virtual node distribution, replication factor RF=3, or write quorums."
+        },
+        {
+          "claim": "Therefore, I cannot answer your question using the supplied documents.",
+          "supported": true,
+          "reason": "Direct conclusion following the accurate assessment that the information is absent from the context."
+        }
+      ]
+    },
+    {
+      "id": "Q015",
+      "category": "single_hop",
+      "query": "How does the cost-based query optimizer execute join pushdown and columnar projection pushdown?",
+      "answer_preview": "Based on the provided context, there is no information explaining how the cost-based query optimizer executes join pushd...",
+      "num_context_chunks": 5,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The provided context does not contain information explaining how the cost-based query optimizer executes join pushdown and columnar projection pushdown.",
+          "supported": true,
+          "reason": "The context only contains fragments about persistent cold storage and sub-clause headings for quantitative benchmarks, with no mention of query optimizers, join pushdown, or columnar projection pushdown."
+        }
+      ]
+    },
+    {
+      "id": "Q016",
+      "category": "single_hop",
+      "query": "How does BGP Anycast route flap damping and AS path selection route traffic to edge nodes?",
+      "answer_preview": "Based on the provided context, the documents do not explain the specific mechanism of *how* BGP Anycast route flap dampi...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The documents do not explain the specific mechanism of how BGP Anycast route flap damping and AS path selection route traffic to edge nodes.",
+          "supported": true,
+          "reason": "Accurate assessment of context limitations."
+        },
+        {
+          "claim": "Subsystem modules handling autonomous system AS path selection, BGP community tagging, Anycast route flap damping, latency-based GeoDNS routing, and ECMP load balancing must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text in clauses 4.1.5 and 4.1.1."
+        },
+        {
+          "claim": "These requirements fall under operational standards NET-BGP-0405 (Clause 4.1.5) and NET-BGP-0401 (Clause 4.1.1).",
+          "supported": true,
+          "reason": "Directly supported by the context documents."
+        }
+      ]
+    },
+    {
+      "id": "Q017",
+      "category": "single_hop",
+      "query": "What QUIC protocol frame structure enables UDP zero-RTT connection resumption in HTTP/3?",
+      "answer_preview": "Based on the provided documents, the text states that subsystem modules handling \"QUIC protocol frame structure, UDP zer...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The text states that subsystem modules handling QUIC protocol frame structure, UDP zero-RTT connection resumption, head-of-line blocking avoidance, connection migration across IP changes must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly verified against the context text."
+        },
+        {
+          "claim": "The context does not explain which specific QUIC protocol frame structure enables UDP zero-RTT connection resumption.",
+          "supported": true,
+          "reason": "The context mentions the items in a list format and does not provide a causal mechanism explaining how a frame structure enables zero-RTT."
+        },
+        {
+          "claim": "The context groups these aspects together as being handled by subsystem modules under operational standards NET-H3-0409 and NET-H3-0403.",
+          "supported": true,
+          "reason": "Directly supported by clauses referencing NET-H3-0409 and NET-H3-0403 in the context."
+        }
+      ]
+    },
+    {
+      "id": "Q018",
+      "category": "single_hop",
+      "query": "How do stale-while-revalidate semantics and surrogate keys manage targeted edge cache purging?",
+      "answer_preview": "Based on the provided documents, the text outlines that subsystem modules handling stale-while-revalidate semantics and ...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling stale-while-revalidate semantics and surrogate keys for targeted cache purging must enforce strict idempotency, telemetry emission, and failure boundary isolation under operational standards NET-CDN-0407, NET-CDN-0409, and NET-CDN-0410.",
+          "supported": true,
+          "reason": "Directly supported by the text which lists these requirements under the respective operational standards."
+        },
+        {
+          "claim": "The provided context does not explain the specific mechanics of how stale-while-revalidate semantics and surrogate keys manage targeted edge cache purging.",
+          "supported": true,
+          "reason": "Accurate assessment of the limitations of the retrieved text regarding the 'how' part of the user's question."
+        }
+      ]
+    },
+    {
+      "id": "Q019",
+      "category": "single_hop",
+      "query": "Which token bucket and leaky bucket rate limiting algorithms protect upstream scrubbing centers from DDoS?",
+      "answer_preview": "Based on the provided documents, the operational standards governing DDoS mitigation and rate limiting algorithms (inclu...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Operational standards governing DDoS mitigation and rate limiting algorithms are specified in Clauses 4.4.6, 4.4.7, and 4.4.9 under standards NET-DDOS-0406, NET-DDOS-0407, and NET-DDOS-0409.",
+          "supported": true,
+          "reason": "Directly supported by the provided text across different clause variations."
+        },
+        {
+          "claim": "These frameworks require all subsystem modules handling token bucket and leaky bucket algorithms, SYN cookie handshakes, upstream scrubbing centers, volumetric attack scrubbing, and TLS fingerprinting to enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly quoted or paraphrased accurately from the text."
+        }
+      ]
+    },
+    {
+      "id": "Q020",
+      "category": "single_hop",
+      "query": "What weighted round-robin and active health probing strategies govern global load balancing traffic splitting?",
+      "answer_preview": "Based on the provided documents, subsystem modules handling weighted round-robin and active health probing (along with l...",
+      "num_context_chunks": 5,
+      "total_claims": 6,
+      "supported_claims": 6,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling weighted round-robin and active health probing are governed by the operational framework for global load balancing and traffic splitting.",
+          "supported": true,
+          "reason": "Directly supported by Clause 4.5.1 and 4.5.10 contexts."
+        },
+        {
+          "claim": "They include least connections algorithms, canary traffic shifting, and cross-datacenter failover.",
+          "supported": true,
+          "reason": "Explicitly listed together in the context under NET-GLB-0401 and NET-GLB-0410."
+        },
+        {
+          "claim": "Governed under Operational Standard NET-GLB-0410 (Clause 4.5.10)",
+          "supported": true,
+          "reason": "Directly stated in the first context document."
+        },
+        {
+          "claim": "Governed under Operational Standard NET-GLB-0401 (Clause 4.5.1)",
+          "supported": true,
+          "reason": "Directly stated in the second and fourth context documents."
+        },
+        {
+          "claim": "All such subsystem modules must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'all subsystem modules handling weighted round-robin... must enforce strict idempotency, telemetry emission, and failure boundary isolation'."
+        },
+        {
+          "claim": "When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization through verified cryptographic handshakes and persistent state ledgers.",
+          "supported": true,
+          "reason": "Directly supported by the exact phrasing in the context documents."
+        }
+      ]
+    },
+    {
+      "id": "Q021",
+      "category": "single_hop",
+      "query": "What Recovery Time Objective RTO and Recovery Point Objective RPO limits classify DR tiers?",
+      "answer_preview": "Based on the provided documents, the text does not specify exact numerical limits for the Recovery Time Objective (RTO) ...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The text does not specify exact numerical limits for the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) thresholds.",
+          "supported": true,
+          "reason": "The retrieved context mentions RTO thresholds and RPO limits as part of subsystem modules under operational standards, but does not provide specific numerical limits for them."
+        },
+        {
+          "claim": "It states that all subsystem modules handling RTO thresholds, RPO limits, failover protocols (cold vs. warm vs. hot standby), and DR tier classification must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'all subsystem modules handling Recovery Time Objective RTO thresholds, Recovery Point Objective RPO limits, cold vs warm vs hot standby failover protocols, DR tier classification must enforce strict idempotency, telemetry emission, and failure boundary isolation.'"
+        },
+        {
+          "claim": "This is governed under operational standards such as HA-RTO-0505 and HA-RTO-0501.",
+          "supported": true,
+          "reason": "Directly supported by the text citing operational standards HA-RTO-0505 and HA-RTO-0501."
+        }
+      ]
+    },
+    {
+      "id": "Q022",
+      "category": "single_hop",
+      "query": "How do Conflict-Free Replicated Data Types CRDT maintain active-active multi-region synchronization?",
+      "answer_preview": "Based on the provided documents, Conflict-Free Replicated Data Types (CRDTs) are part of the subsystem modules handled u...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Conflict-Free Replicated Data Types (CRDTs) are part of the subsystem modules handled under the operational framework for active-active multi-region synchronization (such as operational standards HA-A2A-0505, HA-A2A-0507, HA-A2A-0509, and HA-A2A-0510).",
+          "supported": true,
+          "reason": "The context explicitly mentions that under these operational standards, all subsystem modules handling conflict-free replicated data types CRDT must enforce specific rules."
+        },
+        {
+          "claim": "These subsystem modules must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly stated in the text: 'all subsystem modules handling... conflict-free replicated data types CRDT... must enforce strict idempotency, telemetry emission, and failure boundary isolation.'"
+        },
+        {
+          "claim": "When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.'"
+        }
+      ]
+    },
+    {
+      "id": "Q023",
+      "category": "single_hop",
+      "query": "What fault injection experiments and bulkhead isolation patterns are executed in chaos engineering?",
+      "answer_preview": "Based on the provided context, specific individual fault injection experiments or specific bulkhead isolation patterns t...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Based on the provided context, specific individual fault injection experiments or specific bulkhead isolation patterns that are executed are not detailed.",
+          "supported": true,
+          "reason": "The context mentions the terms as part of a list of subsystem module handlers but does not provide details of specific experiments or patterns executed."
+        },
+        {
+          "claim": "The text states that subsystem modules handling 'fault injection experiments, network latency simulation, kill-pod automation, cascading dependency failure prevention, bulkhead isolation patterns' must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'all subsystem modules handling fault injection experiments, network latency simulation, kill-pod automation, cascading dependency failure prevention, bulkhead isolation patterns must enforce strict idempotency, telemetry emission, and failure boundary isolation.'"
+        },
+        {
+          "claim": "This is under the specified operational standards (HA-CHAOS-0505 and HA-CHAOS-0501).",
+          "supported": true,
+          "reason": "Directly supported by the text referencing operational standards HA-CHAOS-0505 and HA-CHAOS-0501."
+        }
+      ]
+    },
+    {
+      "id": "Q024",
+      "category": "single_hop",
+      "query": "How is four nines 99.99% availability calculated against monthly error budget burn rates?",
+      "answer_preview": "Based on the provided documents, the text mentions that the subsystem modules handle \"four nines 99.99% availability cal...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The provided documents mention that subsystem modules handle four nines 99.99% availability calculations, monthly error budget burn rates, composite SLA degradation rules, downtime refund credits under operational standard HA-SLA-0501.",
+          "supported": true,
+          "reason": "Directly supported by Clause 5.4.1 text in the context."
+        },
+        {
+          "claim": "The documents do not contain the specific mathematical formula or method detailing how availability is calculated against monthly error budget burn rates.",
+          "supported": true,
+          "reason": "Accurate assessment of the provided context, which lacks calculation formulas."
+        }
+      ]
+    },
+    {
+      "id": "Q025",
+      "category": "single_hop",
+      "query": "What WORM object storage immutability and encrypted air-gapped snapshots protect backup strategies?",
+      "answer_preview": "Based on the provided context, the documents do not state that \"WORM object storage immutability and encrypted air-gappe...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The documents state that Clause 5.5.7, 5.5.8, and 5.5.9 specify the governing operational framework for backup strategies, retention, and immutability.",
+          "supported": true,
+          "reason": "Directly supported by the text in clauses 5.5.7, 5.5.8, and 5.5.9."
+        },
+        {
+          "claim": "Operational standards are HA-BAK-0507, HA-BAK-0508, and HA-BAK-0509.",
+          "supported": true,
+          "reason": "Directly mentioned in the corresponding clauses in the context."
+        },
+        {
+          "claim": "Subsystem modules handling WORM object storage immutability, encrypted air-gapped snapshots, periodic PITR, and automated restore drill validation must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Verbatim or nearly verbatim phrasing from the context documents."
+        }
+      ]
+    },
+    {
+      "id": "Q026",
+      "category": "single_hop",
+      "query": "What is the unit cost for Standard tier compute per vCPU-hour and High-Memory tier per GB-hour?",
+      "answer_preview": "Based on the provided context, the unit costs are:\n\n* **Standard tier compute:** $0.048 per vCPU-hour [1, 2, 4, 5]\n* **H...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The Standard tier compute unit cost is $0.048 per vCPU-hour.",
+          "supported": true,
+          "reason": "Directly stated in Clause 6.1.1: 'Standard tier compute unit cost ($0.048 per vCPU-hour)'."
+        },
+        {
+          "claim": "The High-Memory tier unit cost is $0.092 per GB-hour.",
+          "supported": true,
+          "reason": "Directly stated in Clause 6.1.1: 'High-Memory tier ($0.092 per GB-hour)'."
+        }
+      ]
+    },
+    {
+      "id": "Q027",
+      "category": "single_hop",
+      "query": "What are the storage rates for Hot tier ($0.021) and Cold archive storage ($0.004) per GB-month?",
+      "answer_preview": "Based on the provided context, there is no mention of the storage rates for the Hot tier ($0.021) or Cold archive storag...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Based on the provided context, there is no mention of the storage rates for the Hot tier ($0.021) or Cold archive storage ($0.004) per GB-month.",
+          "supported": true,
+          "reason": "The context does not contain these pricing details, and the answer correctly identifies this absence."
+        },
+        {
+          "claim": "The documents only mention emitting records to persistent cold storage.",
+          "supported": true,
+          "reason": "The phrase 'efore emitting records to persistent cold storage.' is the only text present in the retrieved context documents."
+        }
+      ]
+    },
+    {
+      "id": "Q028",
+      "category": "single_hop",
+      "query": "What enterprise invoice credit percentages apply when uptime falls below 99.9%, 99.0%, and 95.0%?",
+      "answer_preview": "Based on the provided documents, the enterprise invoice credit percentages for subsystem modules handling uptime thresho...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Uptime below 99.9% grants a 10% invoice credit",
+          "supported": true,
+          "reason": "Directly supported by the text: 'uptime below 99.9% grants 10% invoice credit'"
+        },
+        {
+          "claim": "Uptime below 99.0% grants a 25% invoice credit",
+          "supported": true,
+          "reason": "Directly supported by the text: 'uptime below 99.0% grants 25% invoice credit'"
+        },
+        {
+          "claim": "Uptime below 95.0% grants a 100% full invoice credit",
+          "supported": true,
+          "reason": "Directly supported by the text: 'uptime below 95.0% grants 100% full invoice credit'"
+        }
+      ]
+    },
+    {
+      "id": "Q029",
+      "category": "single_hop",
+      "query": "What volume licensing discounts apply to Tier 2 (10-50TB) and Tier 3 (50-250TB) storage?",
+      "answer_preview": "Based on the provided documents, the following volume licensing discounts apply to Tier 2 and Tier 3 storage:\n\n* **Tier ...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Tier 2 (10-50TB) volume licensing discount is 12%",
+          "supported": true,
+          "reason": "Explicitly stated in the context under operational standards FIN-VOL-0603 and FIN-VOL-0601."
+        },
+        {
+          "claim": "Tier 3 (50-250TB) volume licensing discount is 22%",
+          "supported": true,
+          "reason": "Explicitly stated in the context under operational standards FIN-VOL-0603 and FIN-VOL-0601."
+        }
+      ]
+    },
+    {
+      "id": "Q030",
+      "category": "single_hop",
+      "query": "At what percentage thresholds are automated budget alerts triggered under FinOps governance?",
+      "answer_preview": "Based on the provided documents, automated budget alerts are triggered at **75%, 90%, and 100%** thresholds [1, 2, 3, 4,...",
+      "num_context_chunks": 5,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Automated budget alerts are triggered at 75%, 90%, and 100% thresholds.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'automated budget alerts at 75%, 90%, and 100% thresholds'"
+        }
+      ]
+    },
+    {
+      "id": "Q031",
+      "category": "single_hop",
+      "query": "How do idempotent producers and consumer group rebalancing protocols ensure Kafka exactly-once processing EOS?",
+      "answer_preview": "Based on the provided documents, the text outlines that operational standards (such as STR-KAFKA-0704 and STR-KAFKA-0705...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Operational standards STR-KAFKA-0704 and STR-KAFKA-0705 dictate that subsystem modules handling partition reassignment, commit log retention segments, consumer group rebalancing protocols, and exactly-once processing semantics EOS with idempotent producers must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by text across multiple clauses in the context."
+        },
+        {
+          "claim": "Under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.",
+          "supported": true,
+          "reason": "Directly supported by the context documents."
+        },
+        {
+          "claim": "The provided context does not explicitly detail the exact step-by-step mechanism of how idempotent producers and consumer group rebalancing protocols interact to ensure EOS beyond the stated requirements.",
+          "supported": true,
+          "reason": "Accurate assessment of the limitations of the retrieved context."
+        }
+      ]
+    },
+    {
+      "id": "Q032",
+      "category": "single_hop",
+      "query": "What RocksDB state backend checkpointing and Chandy-Lamport distributed snapshot algorithms are used in Flink?",
+      "answer_preview": "Based on the provided documents, subsystem modules handling RocksDB state backend checkpointing and the Chandy-Lamport d...",
+      "num_context_chunks": 5,
+      "total_claims": 4,
+      "supported_claims": 4,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling RocksDB state backend checkpointing and the Chandy-Lamport distributed snapshot algorithm must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'all subsystem modules handling RocksDB state backend checkpointing, distributed snapshot algorithm Chandy-Lamport... must enforce strict idempotency, telemetry emission, and failure boundary isolation.'"
+        },
+        {
+          "claim": "These requirements fall under the operational standards STR-FLINK-0705 (Clause 7.2.5) and STR-FLINK-0707 (Clause 7.2.7).",
+          "supported": true,
+          "reason": "Directly supported by clauses 7.2.5 (STR-FLINK-0705) and 7.2.7 (STR-FLINK-0707) mentioned in the context."
+        },
+        {
+          "claim": "These components are part of the governing operational framework for stateful stream processing engines.",
+          "supported": true,
+          "reason": "Directly supported by the text stating they specify the 'governing operational framework for stateful stream processing engines'."
+        },
+        {
+          "claim": "The context does not provide additional technical implementation details about which specific variants or configurations are used beyond the stated policies.",
+          "supported": true,
+          "reason": "Accurate assessment of the provided context, which only lists the standard and policy requirements without detailing specific internal algorithm variants."
+        }
+      ]
+    },
+    {
+      "id": "Q033",
+      "category": "single_hop",
+      "query": "What Parquet columnar encoding and write-audit-publish patterns support lakehouse ACID transactions?",
+      "answer_preview": "Based on the provided documents, Clause 7.3.6 and operational standard STR-LAKE-0706 govern the framework for lakehouse ...",
+      "num_context_chunks": 5,
+      "total_claims": 7,
+      "supported_claims": 7,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Clause 7.3.6 and operational standard STR-LAKE-0706 govern the framework for lakehouse storage formats and ACID transactions.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'Clause 7.3.6 specifies the governing operational framework for lakehouse storage formats and acid transactions... Under operational standard STR-LAKE-0706...'"
+        },
+        {
+          "claim": "Subsystem modules handling Parquet columnar encoding with dictionary compression, metadata log versioning, time-travel queries, and write-audit-publish patterns must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'all subsystem modules handling Parquet columnar encoding with dictionary compression, metadata log versioning, time-travel queries, write-audit-publish patterns must enforce strict idempotency, telemetry emission, and failure boundary isolation.'"
+        },
+        {
+          "claim": "When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.'"
+        },
+        {
+          "claim": "Integration with upstream event buses requires monotonic sequence numbering and explicit lease expiration timers configured to a default maximum threshold of 30,000 milliseconds.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'Furthermore, integration with upstream event buses requires monotonic sequence numbering and explicit lease expiration timers configured to a default maximum threshold of 30,000 milliseconds.'"
+        },
+        {
+          "claim": "Telemetry streams must capture request headers, payload checksums, and distributed trace contexts conforming to OpenTelemetry semantic conventions before emitting records to persistent cold storage.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'Telemetry streams must capture request headers, payload checksums, and distributed trace contexts conforming to OpenTelemetry semantic conventions before emitting records to persistent cold storage.'"
+        },
+        {
+          "claim": "Administrators and platform engineers must never bypass the verification gates defined in sub-clause 7.3.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'Administrators and platform engineers must never bypass the verification gates defined in sub-clause 7.3.'"
+        },
+        {
+          "claim": "Failure to adhere to policy STR-LAKE-0706 constitutes an immediate compliance violation subject to automated remediation protocols and escalation to the global technical oversight committee.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'Failure to adhere to policy STR-LAKE-0706 constitutes an immediate compliance violation subject to automated remediation protocols and escalation to the global technical oversight committee.'"
+        }
+      ]
+    },
+    {
+      "id": "Q034",
+      "category": "single_hop",
+      "query": "How do Avro schema compatibility and Dead Letter Queue DLQ routing enforce data quality validation?",
+      "answer_preview": "Based on the provided context, subsystem modules handling backward and forward Avro schema compatibility and Dead Letter...",
+      "num_context_chunks": 5,
+      "total_claims": 6,
+      "supported_claims": 6,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling backward and forward Avro schema compatibility and Dead Letter Queue DLQ routing must enforce strict idempotency, telemetry emission, and failure boundary isolation under operational standard STR-QUAL-0707.",
+          "supported": true,
+          "reason": "Directly stated in the context."
+        },
+        {
+          "claim": "When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.",
+          "supported": true,
+          "reason": "Directly stated in the context."
+        },
+        {
+          "claim": "Integration with upstream event buses requires monotonic sequence numbering and explicit lease expiration timers configured to a default maximum threshold of 30,000 milliseconds.",
+          "supported": true,
+          "reason": "Directly stated in the context."
+        },
+        {
+          "claim": "Telemetry streams must capture request headers, payload checksums, and distributed trace contexts conforming to OpenTelemetry semantic conventions before emitting records to persistent cold storage.",
+          "supported": true,
+          "reason": "Directly stated in the context."
+        },
+        {
+          "claim": "Administrators and platform engineers must never bypass the verification gates defined in sub-clause 7.4.",
+          "supported": true,
+          "reason": "Directly stated in the context."
+        },
+        {
+          "claim": "Failure to adhere to policy STR-QUAL-0707 constitutes an immediate compliance violation subject to automated remediation protocols and escalation to the global technical oversight committee.",
+          "supported": true,
+          "reason": "Directly stated in the context."
+        }
+      ]
+    },
+    {
+      "id": "Q035",
+      "category": "single_hop",
+      "query": "How does batch ETL orchestration handle backfill concurrency controls and idempotent pipeline restarts?",
+      "answer_preview": "Based on the provided documents, subsystem modules handling backfill concurrency controls and idempotent pipeline restar...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling backfill concurrency controls and idempotent pipeline restarts (under operational standards STR-DAG-0707 and STR-DAG-0709) must enforce strict idempotency, telemetry emission, and failure boundary isolation within the governing operational framework for batch ETL orchestration and DAG execution.",
+          "supported": true,
+          "reason": "Directly supported by the context which states that under operational standards STR-DAG-0707/STR-DAG-0709, subsystem modules handling backfill concurrency controls and idempotent pipeline restarts must enforce strict idempotency, telemetry emission, and failure boundary isolation as part of Clause 7.5.7/7.5.9."
+        },
+        {
+          "claim": "When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.'"
+        }
+      ]
+    },
+    {
+      "id": "Q036",
+      "category": "single_hop",
+      "query": "How does vLLM PagedAttention virtual memory allocation and continuous batching optimize LLM serving?",
+      "answer_preview": "Based on the provided context, the documents state that subsystem modules handling vLLM PagedAttention virtual memory al...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The context states that subsystem modules handling vLLM PagedAttention virtual memory allocation and continuous batching iteration scheduling must enforce strict idempotency, telemetry emission, and failure boundary isolation under operational standards ML-SERV-0806 and ML-SERV-0801.",
+          "supported": true,
+          "reason": "Directly supported by the text in clauses 8.1.6 and 8.1.1 across all retrieved documents."
+        },
+        {
+          "claim": "The context does not contain specific information explaining how vLLM PagedAttention virtual memory allocation and continuous batching optimize LLM serving beyond operational and compliance requirements.",
+          "supported": true,
+          "reason": "Accurate assessment of the limitations of the provided context, which mentions the components but does not detail their internal optimization mechanisms."
+        }
+      ]
+    },
+    {
+      "id": "Q037",
+      "category": "single_hop",
+      "query": "What Megatron-style tensor parallelism and ZeRO stage-3 parameter sharding are used across GPU ranks?",
+      "answer_preview": "Based on the provided documents, operational standard **ML-PARA-0803** (specified under Clause 8.2.3) dictates that all ...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Operational standard ML-PARA-0803 (specified under Clause 8.2.3) dictates that all subsystem modules handling Megatron-style tensor parallelism across GPU ranks and ZeRO stage-3 parameter sharding must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'Under operational standard ML-PARA-0803, all subsystem modules handling Megatron-style tensor parallelism across GPU ranks, ZeRO stage-3 parameter sharding... must enforce strict idempotency, telemetry emission, and failure boundary isolation.'"
+        },
+        {
+          "claim": "This also includes pipeline parallelism micro-batching and NCCL all-reduce collectives.",
+          "supported": true,
+          "reason": "Directly supported by the text including these elements in the same list."
+        }
+      ]
+    },
+    {
+      "id": "Q038",
+      "category": "single_hop",
+      "query": "What AWQ activation-aware quantization and FlashAttention-2 GPU kernels optimize model inference?",
+      "answer_preview": "Based on the provided documents, Clause 8.3.6 and operational standard ML-QUANT-0806 specify the governing operational f...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Clause 8.3.6 and operational standard ML-QUANT-0806 specify the governing operational framework for low-bit quantization and kernel optimization within the global enterprise architecture.",
+          "supported": true,
+          "reason": "Directly stated in the context."
+        },
+        {
+          "claim": "Subsystem modules handling AWQ activation-aware weight quantization, GPTQ second-order Taylor expansion, FP8 mixed-precision matrix multiplication, and FlashAttention-2 GPU kernels must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly stated in the context."
+        },
+        {
+          "claim": "During peak load benchmark testing, the system demonstrated a p99 processing latency below 12.4 milliseconds while maintaining zero data corruption across all active nodes.",
+          "supported": true,
+          "reason": "Directly stated in the context."
+        }
+      ]
+    },
+    {
+      "id": "Q039",
+      "category": "single_hop",
+      "query": "What Hierarchical Navigable Small World HNSW graphs and product quantization PQ index vector search?",
+      "answer_preview": "Based on the provided documents, subsystem modules handling Hierarchical Navigable Small World (HNSW) graphs, Inverted F...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling Hierarchical Navigable Small World (HNSW) graphs, Inverted File Flat (IVF-FLAT) indexes, product quantization (PQ) compression, and cosine vs. dot-product similarity metrics fall under the governing operational framework for vector search indexing and approximate nearest neighbors specified in Clause 8.4.1 (operational standard ML-VEC-0801).",
+          "supported": true,
+          "reason": "Directly supported by the text in the retrieved context stating 'Clause 8.4.1 specifies the governing operational framework for vector search indexing... Under operational standard ML-VEC-0801, all subsystem modules handling Hierarchical Navigable Small World HNSW graphs, Inverted File Flat IVF-FLAT indexes, product quantization PQ compression, cosine vs dot-product similarity metrics...'"
+        },
+        {
+          "claim": "These components are part of the subsystem modules that must enforce strict idempotency, telemetry emission, and failure boundary isolation within the global enterprise architecture.",
+          "supported": true,
+          "reason": "Directly supported by the retrieved context: '...must enforce strict idempotency, telemetry emission, and failure boundary isolation.'"
+        }
+      ]
+    },
+    {
+      "id": "Q040",
+      "category": "single_hop",
+      "query": "What Wasserstein distance metrics detect embedding drift and monitor token latency percentiles?",
+      "answer_preview": "Based on the provided context, there is no information regarding Wasserstein distance metrics detecting embedding drift ...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Based on the provided context, there is no information regarding Wasserstein distance metrics detecting embedding drift or monitoring token latency percentiles.",
+          "supported": true,
+          "reason": "The context only contains fragments about emitting records to persistent cold storage and sub-clause headers, confirming the information is absent."
+        },
+        {
+          "claim": "The context only mentions emitting records to persistent cold storage across multiple sub-clauses regarding quantitative benchmarks, SLA thresholds, and metrics.",
+          "supported": true,
+          "reason": "Directly matches the repeated text in the retrieved context."
+        }
+      ]
+    },
+    {
+      "id": "Q041",
+      "category": "single_hop",
+      "query": "What Article 17 right to erasure timeframe and DPIA triggers govern GDPR compliance?",
+      "answer_preview": "Based on the provided documents, the operational framework for GDPR compliance specifies the following regarding the Art...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Article 17 right to erasure requires data deletion within 30 days.",
+          "supported": true,
+          "reason": "Explicitly stated in the context under operational standards REG-GDPR-0907 and REG-GDPR-0901."
+        },
+        {
+          "claim": "Subsystem modules handling DPIA triggers, Article 17 right to erasure, Article 20 data portability, and cross-border transfer Standard Contractual Clauses (SCCs) must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text outlining requirements for subsystem modules handling these specific items."
+        },
+        {
+          "claim": "These operational standards are detailed under operational standard REG-GDPR-0907 and operational standard REG-GDPR-0901.",
+          "supported": true,
+          "reason": "Both standard names (REG-GDPR-0907 and REG-GDPR-0901) appear in the corresponding source clauses in the text."
+        }
+      ]
+    },
+    {
+      "id": "Q042",
+      "category": "single_hop",
+      "query": "What ePHI encryption mandates and 6-year audit trail retention are required under HIPAA Security Rules?",
+      "answer_preview": "Based on the provided documents, under operational standards **REG-HIPAA-0906** (specified in Clause 9.2.6) and **REG-HI...",
+      "num_context_chunks": 5,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Under operational standards REG-HIPAA-0906 (specified in Clause 9.2.6) and REG-HIPAA-0907 (specified in Clause 9.2.7), all subsystem modules handling ePHI encryption in transit and at rest, Business Associate Agreement (BAA) mandates, the minimum necessary standard, and 6-year audit trail retention must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text in clauses 9.2.6 and 9.2.7 across the provided context documents."
+        }
+      ]
+    },
+    {
+      "id": "Q043",
+      "category": "single_hop",
+      "query": "What five Trust Services Criteria are audited under SOC 2 Type II continuous evidence collection?",
+      "answer_preview": "Based on the provided documents, the five Trust Services Criteria handled by subsystem modules under continuous evidence...",
+      "num_context_chunks": 5,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The five Trust Services Criteria handled by subsystem modules under continuous evidence collection are Security, Availability, Processing Integrity, Confidentiality, and Privacy.",
+          "supported": true,
+          "reason": "Explicitly stated in the text under operational standards REG-SOC2-0907 and REG-SOC2-0901."
+        }
+      ]
+    },
+    {
+      "id": "Q044",
+      "category": "single_hop",
+      "query": "What PCI-DSS requirement 3 tokenization and requirement 10 automated logging protect cardholder data?",
+      "answer_preview": "Based on the provided documents, subsystem modules handling PCI-DSS v4.0 requirement 3 cardholder data tokenization and ...",
+      "num_context_chunks": 5,
+      "total_claims": 6,
+      "supported_claims": 6,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling PCI-DSS v4.0 requirement 3 cardholder data tokenization and requirement 10 automated audit logging (along with quarterly external vulnerability ASV scanning) must enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by the text across all provided documents."
+        },
+        {
+          "claim": "When executing under multi-region distributed conditions, the runtime guarantees deterministic synchronization using verified cryptographic handshakes and persistent state ledgers.",
+          "supported": true,
+          "reason": "Directly supported by the text."
+        },
+        {
+          "claim": "Integration with upstream event buses requires monotonic sequence numbering and explicit lease expiration timers configured to a default maximum threshold of 30,000 milliseconds.",
+          "supported": true,
+          "reason": "Directly supported by the text."
+        },
+        {
+          "claim": "Telemetry streams must capture request headers, payload checksums, and distributed trace contexts conforming to OpenTelemetry semantic conventions before emitting records to persistent cold storage.",
+          "supported": true,
+          "reason": "Directly supported by the text."
+        },
+        {
+          "claim": "These operations are governed under operational frameworks such as Clause 9.4.5 (REG-PCI-0905), Clause 9.4.9 (REG-PCI-0909), and Clause 9.4.1 (REG-PCI-0901).",
+          "supported": true,
+          "reason": "Directly supported by the respective context documents."
+        },
+        {
+          "claim": "Administrators and platform engineers must never bypass verification gates, as failure to adhere constitutes an immediate compliance violation.",
+          "supported": true,
+          "reason": "Directly supported by the text."
+        }
+      ]
+    },
+    {
+      "id": "Q045",
+      "category": "single_hop",
+      "query": "What SEC Rule 17a-4 non-rewritable non-erasable storage format governs 7-year financial record retention?",
+      "answer_preview": "Based on the provided documents, the operational standards and clauses governing financial records retention and auditin...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Operational standard REG-SEC17-0905 (Clause 9.5.5) governs subsystem modules handling SEC Rule 17a-4 non-rewritable non-erasable storage format and 7-year statutory financial retention.",
+          "supported": true,
+          "reason": "Directly supported by Clause 9.5.5 and operational standard REG-SEC17-0905 in the context."
+        },
+        {
+          "claim": "Operational standard REG-SEC17-0909 (Clause 9.5.9) governs subsystem modules handling SEC Rule 17a-4 non-rewritable non-erasable storage format and 7-year statutory financial retention.",
+          "supported": true,
+          "reason": "Directly supported by Clause 9.5.9 and operational standard REG-SEC17-0909 in the context."
+        },
+        {
+          "claim": "Operational standard REG-SEC17-0907 (Clause 9.5.7) governs subsystem modules handling SEC Rule 17a-4 non-rewritable non-erasable storage format and 7-year statutory financial retention.",
+          "supported": true,
+          "reason": "Directly supported by Clause 9.5.7 and operational standard REG-SEC17-0907 in the context."
+        }
+      ]
+    },
+    {
+      "id": "Q046",
+      "category": "single_hop",
+      "query": "What response SLAs define SEV-1, SEV-2, and SEV-3 incidents in the severity classification matrix?",
+      "answer_preview": "Based on the provided documents, the response SLAs that define incident severities in the classification matrix are:\n\n* ...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "SEV-1 has a 15-minute response SLA for a complete outage.",
+          "supported": true,
+          "reason": "Explicitly stated in the text: 'SEV-1 (complete outage, 15-minute response SLA)'."
+        },
+        {
+          "claim": "SEV-2 has a 30-minute response SLA for a degraded core workflow.",
+          "supported": true,
+          "reason": "Explicitly stated in the text: 'SEV-2 (degraded core workflow, 30-minute SLA)'."
+        },
+        {
+          "claim": "SEV-3 has a 4-hour response SLA for a minor bug.",
+          "supported": true,
+          "reason": "Explicitly stated in the text: 'SEV-3 (minor bug, 4-hour SLA)'."
+        }
+      ]
+    },
+    {
+      "id": "Q047",
+      "category": "single_hop",
+      "query": "After how many minutes is an unacknowledged on-call alert automatically escalated?",
+      "answer_preview": "Based on the provided documents, an unacknowledged on-call alert is automatically escalated after **5 minutes** [1, 2, 3...",
+      "num_context_chunks": 5,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "An unacknowledged on-call alert is automatically escalated after 5 minutes.",
+          "supported": true,
+          "reason": "The context explicitly states 'automated unacknowledged alert escalation after 5 minutes' under operational standards SRE-CALL-1007 and SRE-CALL-1001."
+        }
+      ]
+    },
+    {
+      "id": "Q048",
+      "category": "single_hop",
+      "query": "Within how many hours must a blameless post-mortem be published following incident resolution?",
+      "answer_preview": "Based on the provided documents, a blameless post-mortem must be published within 72 hours of resolution [1, 2, 3, 4, 5]...",
+      "num_context_chunks": 5,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "A blameless post-mortem must be published within 72 hours of resolution.",
+          "supported": true,
+          "reason": "Explicitly stated in the context under operational standards SRE-POST-1006 and SRE-POST-1001 ('publishing blameless post-mortem within 72 hours of resolution')."
+        }
+      ]
+    },
+    {
+      "id": "Q049",
+      "category": "single_hop",
+      "query": "What Golden Signals and OpenTelemetry span propagation telemetry are tracked on SRE dashboards?",
+      "answer_preview": "Based on the provided documents, the Grafana dashboard tracks the Golden Signals of **latency, traffic, errors, and satu...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The Grafana dashboard tracks the Golden Signals of latency, traffic, errors, and saturation.",
+          "supported": true,
+          "reason": "Directly supported by the text mentioning 'Grafana dashboard Golden Signals (latency, traffic, errors, saturation)'."
+        },
+        {
+          "claim": "Subsystem modules handle OpenTelemetry span propagation, context injection, Prometheus PromQL alerting rules, and enforce strict idempotency, telemetry emission, and failure boundary isolation under the specified operational standards.",
+          "supported": true,
+          "reason": "Directly supported by the text describing operational standards SRE-OBS-1008 and SRE-OBS-1001."
+        },
+        {
+          "claim": "Telemetry streams must capture request headers, payload checksums, and distributed trace contexts conforming to OpenTelemetry semantic conventions before emitting records to persistent cold storage.",
+          "supported": true,
+          "reason": "Directly quoted or closely paraphrased from the end of the provided context documents."
+        }
+      ]
+    },
+    {
+      "id": "Q050",
+      "category": "single_hop",
+      "query": "What progressive traffic shifting percentages (5% -> 25% -> 100%) govern production canary rollouts?",
+      "answer_preview": "Based on the provided documents, progressive traffic shifting operates using the following percentages: **5% -> 25% -> 1...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Progressive traffic shifting operates using the percentages: 5% -> 25% -> 100%.",
+          "supported": true,
+          "reason": "Directly stated in the context (\"progressive traffic shifting (5% -> 25% -> 100%)\")."
+        },
+        {
+          "claim": "This requirement governs production canary rollouts under operational standards SRE-REL-1005 (Clause 10.5.5) and SRE-REL-1001 (Clause 10.5.1).",
+          "supported": true,
+          "reason": "The context mentions both Clause 10.5.5 / SRE-REL-1005 and Clause 10.5.1 / SRE-REL-1001 in relation to production change management and canary rollouts."
+        },
+        {
+          "claim": "These apply to all subsystem modules handling these rollouts.",
+          "supported": true,
+          "reason": "Directly supported by the text stating all subsystem modules handling progressive traffic shifting must enforce these rules."
+        }
+      ]
+    },
+    {
+      "id": "Q051",
+      "category": "multi_hop",
+      "query": "How do Recovery Time Objective RTO thresholds in Disaster Recovery align with SEV-1 incident response SLAs?",
+      "answer_preview": "Based on the provided context, there is no mention of \"Recovery Time Objective (RTO) thresholds in Disaster Recovery.\" T...",
+      "num_context_chunks": 5,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The provided context does not contain information about Recovery Time Objective (RTO) thresholds in Disaster Recovery or how they align with SEV-1 incident response SLAs.",
+          "supported": true,
+          "reason": "The context discusses SEV-1 incident response SLAs (15-minute response SLA) but does not mention RTO thresholds or Disaster Recovery."
+        }
+      ]
+    },
+    {
+      "id": "Q052",
+      "category": "multi_hop",
+      "query": "Compare the KMS 256-bit AES-GCM envelope cryptography with HIPAA ePHI encryption mandates for data at rest.",
+      "answer_preview": "Based on the provided context, there is no mention of \"KMS 256-bit AES-GCM envelope cryptography.\" Therefore, a comparis...",
+      "num_context_chunks": 5,
+      "total_claims": 4,
+      "supported_claims": 4,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Based on the provided context, there is no mention of KMS 256-bit AES-GCM envelope cryptography.",
+          "supported": true,
+          "reason": "The term does not appear in the context."
+        },
+        {
+          "claim": "Therefore, a comparison with HIPAA ePHI encryption mandates cannot be made using the provided documents.",
+          "supported": true,
+          "reason": "Logical deduction based on the absence of the term in the text."
+        },
+        {
+          "claim": "Operational standards (such as REG-HIPAA-0906 and REG-HIPAA-0907 under Clause 9.2) require all subsystem modules handling ePHI encryption in transit and at rest to enforce strict idempotency, telemetry emission, and failure boundary isolation.",
+          "supported": true,
+          "reason": "Directly supported by clauses 9.2.6 and 9.2.7 in the context."
+        },
+        {
+          "claim": "This includes BAA mandates, the minimum necessary standard, and 6-year audit trail retention.",
+          "supported": true,
+          "reason": "Directly mentioned in the context text alongside ePHI encryption requirements."
+        }
+      ]
+    },
+    {
+      "id": "Q053",
+      "category": "multi_hop",
+      "query": "How do Kubernetes Pod Security Standards PSS and NetworkPolicies support Zero-Trust microsegmentation?",
+      "answer_preview": "Based on the provided documents, there is no information explaining how Kubernetes Pod Security Standards PSS and Networ...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The provided documents do not contain information explaining how Kubernetes Pod Security Standards PSS and NetworkPolicies support Zero-Trust microsegmentation.",
+          "supported": true,
+          "reason": "Directly supported by the context which discusses PSS and NetworkPolicies under K8S-ISO-0101 and mentions Zero-Trust microsegmentation separately under SEC-ZTNA-0204, without connecting them."
+        },
+        {
+          "claim": "Documents mention subsystem modules handling NetworkPolicies and PSS must enforce strict idempotency, telemetry emission, and failure boundary isolation under K8S-ISO-0101.",
+          "supported": true,
+          "reason": "Directly supported by Clause 1.5.1 text in the retrieved context."
+        },
+        {
+          "claim": "Document 4 references Zero-Trust Network Access and microsegmentation.",
+          "supported": true,
+          "reason": "Directly supported by Section 2.4 text mentioning context-aware access proxies and microsegmentation."
+        }
+      ]
+    },
+    {
+      "id": "Q054",
+      "category": "multi_hop",
+      "query": "What are the storage cost implications of lakehouse write-audit-publish patterns under Hot vs Cold storage pricing?",
+      "answer_preview": "Based on the provided context, there is no information regarding the storage cost implications of lakehouse write-audit-...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "There is no information regarding the storage cost implications of lakehouse write-audit-publish patterns under Hot vs Cold storage pricing in the provided context.",
+          "supported": true,
+          "reason": "The context only contains fragments mentioning 'emitting records to persistent cold storage' and lacks any cost information."
+        },
+        {
+          "claim": "The provided documents only briefly mention emitting records to persistent cold storage within the headings of various sub-clauses, but they do not contain details about costs or pricing comparisons.",
+          "supported": true,
+          "reason": "The context consists solely of headings like '6.5 Sub-Clause: Quantitative Benchmarks, SLA Thresholds & Metrics' and the phrase 'efore emitting records to persistent cold storage'."
+        }
+      ]
+    },
+    {
+      "id": "Q055",
+      "category": "multi_hop",
+      "query": "How do Kubernetes memory quota allocations in Section 1.5 interface with vLLM PagedAttention virtual memory KV-cache?",
+      "answer_preview": "Based on the provided context, there is no mention of vLLM PagedAttention virtual memory KV-cache. The documents only discuss Kubernetes multi-tenancy...",
+      "num_context_chunks": 5,
+      "total_claims": 5,
+      "supported_claims": 5,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Based on the provided context, there is no mention of vLLM PagedAttention virtual memory KV-cache.",
+          "supported": true,
+          "reason": "Context does not contain references."
+        },
+        {
+          "claim": "The documents discuss Kubernetes multi-tenancy, namespace isolation, network policies, and resource quotas.",
+          "supported": true,
+          "reason": "Supported by Document DOC-K8S-ISO-0105."
+        },
+        {
+          "claim": "The documents mention K8S-ISO_MEMORY_QUOTA_MB, K8S-NET_MEMORY_QUOTA_MB, and K8S-CTRL_MEMORY_QUOTA_MB.",
+          "supported": true,
+          "reason": "Explicitly present in provided tables."
+        },
+        {
+          "claim": "The documents discuss database cache coherency.",
+          "supported": true,
+          "reason": "Supported by Document DOC-DB-OPT-0305."
+        },
+        {
+          "claim": "The provided context does not contain relevant information to answer how Kubernetes memory quota allocations interface with vLLM PagedAttention.",
+          "supported": true,
+          "reason": "Accurate conclusion."
+        }
+      ]
+    },
+    {
+      "id": "Q056",
+      "category": "multi_hop",
+      "query": "How do distributed database Raft consensus heartbeats compare to BGP Anycast route flap damping during network degradation?",
+      "answer_preview": "Based on the provided documents, there is no information regarding distributed database Raft consensus heartbeats or how...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The provided documents contain no information regarding distributed database Raft consensus heartbeats or how they compare to BGP Anycast route flap damping during network degradation.",
+          "supported": true,
+          "reason": "The context does not mention Raft consensus heartbeats at all."
+        },
+        {
+          "claim": "The documents mention BGP Anycast route flap damping as part of the operational standards (NET-BGP-0401 and NET-BGP-0407).",
+          "supported": true,
+          "reason": "Directly supported by the text regarding clause 4.1.1/4.1.7 and standards NET-BGP-0401 and NET-BGP-0407."
+        }
+      ]
+    },
+    {
+      "id": "Q057",
+      "category": "multi_hop",
+      "query": "Synthesize the financial refund credits for uptime degradation below 95% with monthly error budget burn rates.",
+      "answer_preview": "Based on the provided documents, subsystem modules handling uptime below 95.0% grant a 100% full invoice credit ([1], [2...",
+      "num_context_chunks": 5,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Subsystem modules handling uptime below 95.0% grant a 100% full invoice credit.",
+          "supported": true,
+          "reason": "Directly stated in Clause 6.3.5 and 6.3.6 under operational standards FIN-CRED-0605 and FIN-CRED-0606."
+        },
+        {
+          "claim": "The provided context does not contain any information regarding monthly error budget burn rates.",
+          "supported": true,
+          "reason": "Accurately identifies that monthly error budget burn rates are missing from the retrieved context."
+        }
+      ]
+    },
+    {
+      "id": "Q058",
+      "category": "multi_hop",
+      "query": "How do SOC 2 Type II continuous evidence collection requirements correlate with OpenTelemetry distributed tracing spans?",
+      "answer_preview": "Based on the provided context, the documents state that telemetry streams\u2014which must capture distributed trace contexts ...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Telemetry streams must capture distributed trace contexts conforming to OpenTelemetry semantic conventions (along with request headers and payload checksums) before emitting records to persistent cold storage.",
+          "supported": true,
+          "reason": "Directly supported by the text: 'Telemetry streams must capture request headers, payload checksums, and distributed trace contexts conforming to OpenTelemetry semantic conventions before emitting records to persistent cold storage.'"
+        },
+        {
+          "claim": "Subsystem modules handling continuous evidence collection for SOC 2 Type II criteria must enforce strict telemetry emission under operational standards REG-SOC2-0907 and REG-SOC2-0901.",
+          "supported": true,
+          "reason": "Directly supported by the text stating that subsystem modules handling continuous evidence collection must enforce strict telemetry emission under REG-SOC2-0907 (Clause 9.3.7) and REG-SOC2-0901 (Clause 9.3.1)."
+        },
+        {
+          "claim": "The provided context does not explicitly explain how continuous evidence collection requirements directly correlate with OpenTelemetry distributed tracing spans beyond stating that both are requirements for the relevant subsystem modules and telemetry streams.",
+          "supported": true,
+          "reason": "Accurate assessment of the context; the text mentions both requirements independently/within the same standards, but does not provide a direct correlation mechanism between evidence collection and tracing spans."
+        }
+      ]
+    },
+    {
+      "id": "Q059",
+      "category": "multi_hop",
+      "query": "Compare the rate limiting leaky bucket algorithms at edge CDN scrubbers with API server rate limiting in the Kubernetes control plane.",
+      "answer_preview": "Based on the provided context, there is no information regarding rate limiting leaky bucket algorithms at edge CDN scrub...",
+      "num_context_chunks": 5,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "The provided context contains no information regarding rate limiting leaky bucket algorithms at edge CDN scrubbers.",
+          "supported": true,
+          "reason": "The context mentions API server rate limiting in the Kubernetes control plane, but contains zero mentions of edge CDN scrubbers or leaky bucket algorithms."
+        },
+        {
+          "claim": "The documents mention API server rate limiting within the Kubernetes control plane as part of operational standards (K8S-CTRL-0101, K8S-CTRL-0107, K8S-CTRL-0109).",
+          "supported": true,
+          "reason": "Directly supported by the text in clauses 1.1.1, 1.1.7, and 1.1.9."
+        },
+        {
+          "claim": "The context does not provide details about edge CDN scrubbers or leaky bucket algorithms to make a comparison.",
+          "supported": true,
+          "reason": "Accurately reflects the limitations of the retrieved context relative to the comparison requested."
+        }
+      ]
+    },
+    {
+      "id": "Q060",
+      "category": "multi_hop",
+      "query": "What are the network egress cost consequences of maintaining replication factor RF=3 write quorums across regions?",
+      "answer_preview": "Based on the provided context, there is no information regarding the network egress cost consequences of maintaining rep...",
+      "num_context_chunks": 5,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "faithfulness_score": 1.0,
+      "claims": [
+        {
+          "claim": "Based on the provided context, there is no information regarding the network egress cost consequences of maintaining replication factor RF=3 write quorums across regions.",
+          "supported": true,
+          "reason": "The context does not mention network egress costs or replication factor RF=3, making this correct identification of missing information."
+        }
+      ]
+    }
+  ],
+  "total_claims_evaluated": 165,
+  "supported_claims_evaluated": 165,
+  "refusal_queries_count": 4,
+  "answered_queries_count": 56,
+  "mean_faithfulness_answered": 1.0
+}

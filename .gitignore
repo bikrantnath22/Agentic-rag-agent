@@ -1,0 +1,137 @@
+# ==============================================================================
+# Git Ignore Configuration for Multi-Modal RAG Agent
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environment Variables & Secrets (NEVER COMMIT KEYS)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.env
+!.env.example
+*.pem
+*.key
+*.cert
+
+# ------------------------------------------------------------------------------
+# 2. Python Bytecode, Caches & Runtime Artifacts
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.manifest
+*.spec
+
+# ------------------------------------------------------------------------------
+# 3. Virtual Environments
+# ------------------------------------------------------------------------------
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------------------------
+# 4. Local Vector Stores, Databases & Binary Indices
+# ------------------------------------------------------------------------------
+# ChromaDB persistence directory and leveldb/hnsw index files
+data/chroma/
+chroma/
+qdrant/
+data/qdrant/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+data/rag_system.db
+
+# Large binary dumps and embeddings caches
+*.bin
+*.pickle
+*.pkl
+*.parquet
+*.h5
+*.npy
+*.npz
+
+# Explicitly keep evaluation benchmark datasets and audited reports
+!data/enterprise_handbook_500_pages.txt
+!data/evaluation_results_matrix.json
+!data/evaluation_results_matrix.md
+!data/faithfulness_results_60_queries.json
+
+# ------------------------------------------------------------------------------
+# 5. Build, Distribution & Packaging
+# ------------------------------------------------------------------------------
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ------------------------------------------------------------------------------
+# 6. Testing, Linting & Coverage
+# ------------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.ruff_cache/
+.mypy_cache/
+
+# ------------------------------------------------------------------------------
+# 7. Logs & Temporary Output Files
+# ------------------------------------------------------------------------------
+logs/
+*.log
+*.log.*
+tmp/
+temp/
+*.tmp
+
+# ------------------------------------------------------------------------------
+# 8. Editor & IDE Configurations
+# ------------------------------------------------------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------------------------
+# 9. Operating System Files
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------------------------
+# 10. Docker Local Overrides
+# ------------------------------------------------------------------------------
+docker-compose.override.yml

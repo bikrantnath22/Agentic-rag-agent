@@ -1,0 +1,17 @@
+Evaluate the quality of the following answer given the question and context.
+
+Question: {query}
+
+Context:
+{context}
+
+Answer:
+{answer}
+
+Please evaluate:
+1. Does the answer accurately address the question?
+2. Is the answer well-supported by the context?
+3. Are there any inconsistencies or hallucinations?
+4. What could be improved?
+
+Provide a brief evaluation and explicitly end with 'Score: X/10' (where X is from 1-10):

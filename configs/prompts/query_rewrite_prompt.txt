@@ -1,0 +1,6 @@
+Rewrite the following query to make it more specific and suitable for document retrieval.
+Generate 2-3 alternative phrasings that capture the same intent.
+
+Original query: {query}
+
+Rewritten queries (one per line):
